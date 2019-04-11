@@ -10,36 +10,22 @@ header {
     height: 100%;
     background-color: rgba(121, 248, 206, 0.1);
 }
-div{
-    display: inline-flex;
-    min-height: 200px;
-    min-width: 200px;
-    margin: 25px;
-    background-size: cover;
-    background-position: center;
+
+/* div{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+} */
+
+img{
+    margin-top: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;      
     transition: all 2.5s ease;            
 }
-div:hover{
+img:hover{
     transform: scale(1.25)
-}
-#codid{
-    background-color: darkturquoise;
-    background-image: url("/img/0.png");
-    border: 1px solid;  
-}
-#LME{
-    background-color: aqua;
-    border: 1px solid;
-}
-#eliminar{
-    background-color:mediumturquoise;
-    border: 1px solid;
-}
-#nombre{
-    background-color:deepskyblue;
-    border: 1px solid;
-}
-#CME{
-    background-color:lightskyblue;
-    border: 1px solid;
 }
