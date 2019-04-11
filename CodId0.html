@@ -6,65 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Query Maker OperAnalistas</title>
-    <link type="text/css" rel="stylesheet" href="style/Querystyle.css">
+    <!-- <link type="text/css" rel="stylesheet" href="style/Querystyle.css"> -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="scripts/querys.js"></script>
 </head>
 
 <body>
-    <div>
-        <nav>
-            <div class="desktop-none"><a href="#Mobile">Ver Menu</a> </div>
-            <div class="desktop-none"><a href="">Ocultar Menu</a> </div>
-            <ul class="mobile-none" id="Mobile">
-                <li> <a href="/CodId0.html">CodId 0</a></li>
-                <!-- <li> <a href="/NoExiste.html">Bono No Existe</a></li> -->
-                <li> <a href="/eliminar.html">Eliminar Liquidacion</a></li>
-                <li> <a href="/nombre.html">Cambio Nombre Lugar</a></li>
-                <li> <a href="/estadoCME.html">Cambio estado CME</a></li>
-                <li><a href="/lme.html">LME</a></li>
+    <div class="container-fluid">
+        <nav class="nav">
+            <!-- <div class="desktop-none"><a class="nav-link" href="#Mobile">Ver Menu</a> </div>
+            <div class="desktop-none"><a class="nav-link" href="">Ocultar Menu</a> </div> -->
+            <ul class="nav nav-tabs" id="Mobile">
+                <li class="nav-item"> <a class="nav-link active" href="/CodId0.html">CodId 0</a></li>
+                <!-- <li class="nav-item"> <a class="nav-link" href="/NoExiste.html">Bono No Existe</a></li> -->
+                <li class="nav-item"> <a class="nav-link" href="/eliminar.html">Eliminar Liquidacion</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/nombre.html">Cambio Nombre Lugar</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/estadoCME.html">Cambio estado CME</a></li>
+                <li class="nav-item"><a class="nav-link" href="/lme.html">LME</a></li>
             </ul>
         </nav>
     </div>
-
+    <div class="container-fluid">
     <section id="workspace">
         <div id="prest">
-        <label for="prestaciones">Prestacion</label>
-        <select name="prestaciones" id="prestaciones">
-            <option value="0" id="0">306091</option>
-            <option value="1" id="1">306092</option>
-            <option value="2" id="2">305091</option>
-            <option value="3" id="3">305092</option>
-            <option value="4" id="4">308046</option>
-        </select>
+            <label for="prestaciones">Prestacion</label>
+            <select name="prestaciones" class="custom-select my-1 mr-sm-2" id="prestaciones">
+                <option value="0" id="0">306091</option>
+                <option value="1" id="1">306092</option>
+                <option value="2" id="2">305091</option>
+                <option value="3" id="3">305092</option>
+                <option value="4" id="4">308046</option>
+            </select>
         </div>
+        <div class="form-row">
+        <div class="col-md-3 mb-4">
+            <label for="NumActoVenta">NumActoVenta</label>
+            <input type="number" name="NumActoVenta" id="NumActoVenta" class="form-control" required>
+        </div>
+        <div class="col-md-3 mb-4">
+            <label for="CodIdVentaConvenio">CodIdVentaConvenio</label>
+            <input type="number" name="CodIdVentaConvenio" id="CodIdVentaConvenio" class="form-control" required>
+        </div>
+        <div class="col-md-3 mb-4">
+            <label for="FolioBono">FolioBono</label>
+            <input type="number" name="FolioBono" id="FolioBono" class="form-control" required>
+        </div>
+        <div class="col-md-3 mb-4">
+            <label for="CorrPrestacion">CorrPrestacion</label>
+            <input type="number" name="CorrPrestacion" id="CorrPrestacion" class="form-control" required>
+        </div>
+    </div>
 
-        <table>
-            <tr>
-                <th>NumActoVenta</th>
-                <th>CodIdVentaConvenio</th>
-                <th>FolioBono</th>
-                <th>CorrPrestacion</th>
-            </tr>
-            <tr>
-                <td>
-                    <input type="number" name="NumActoVenta" id="NumActoVenta" required>
-                </td>
-                <td>
-                    <input type="number" name="CodIdVentaConvenio" id="CodIdVentaConvenio" required>
-                </td>
-                <td>
-                    <input type="number" name="FolioBono" id="FolioBono" required>
-                </td>
-                <td>
-                    <input type="number" name="CorrPrestacion" id="CorrPrestacion" required>
-                </td>
-            </tr>
-        </table>
-        <button type="button" id="generar" onclick="escribir()">Generar</button>
+        <button type="button" id="generar" class="btn btn-primary" onclick="escribir()">Generar</button>
     </section>
-    <div id="escribe">
+
+    <div class="well well-lg" id="escribe" >
 
     </div>
+    <button onclick="copyToClipboard('#escribe')">Copiar</button>
+</div>
+
 
 </body>
 
