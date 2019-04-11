@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>estadoCME</title>
+    <link type="text/css" rel="stylesheet" href="style/Querystyle.css">
+    <script type="text/javascript" src="scripts/querys.js"></script>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <div class="desktop-none"><a href="#Mobile">Ver Menu</a> </div>
+            <div class="desktop-none"><a href="">Ocultar Menu</a> </div>
+            <ul class="mobile-none" id="Mobile">
+                <li> <a href="/CodId0.html">CodId 0</a></li>
+                <!-- <li> <a href="/NoExiste.html">Bono No Existe</a></li> -->
+                <li> <a href="/eliminar.html">Eliminar Liquidacion</a></li>
+                <li> <a href="/nombre.html">Cambio Nombre Lugar</a></li>
+                <li> <a href="/estadoCME.html">Cambio estado CME</a></li>
+                <li><a href="/lme.html">LME</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section id="workspace">
+
+        <table>
+            <tr>
+                <th>CtaMedId</th>
+                <th>EstadoID</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="CtaMedId" id="CtaMedId" required>
+                </td>
+                <td>
+                    <input type="number" name="EstadoID" id="EstadoID" required>
+                </td>
+                <td>
+                    <input type="date" name="Fecha" id="Fecha" required>
+                </td>
+                <td>
+                    <input type="number" name="Estado" id="Estado" required>
+                </td>
+            </tr>
+        </table>
+        <button type="button" id="generar" onclick="estado()">Generar</button>
+    </section>
+    <div id="estado">
+
+    </div>
+</body>
+
+</html>
