@@ -22,21 +22,18 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="nav nav-tabs" id="Mobile">
-                <li class="nav-item active"> <a class="nav-link active" href="/CodId0.html">CodId 0</a></li>
-                <!-- <li class="nav-item"> <a class="nav-link" href="/NoExiste.html">Bono No Existe</a></li> -->
-                <li class="nav-item"> <a class="nav-link" href="/eliminar.html">Eliminar Liquidacion</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/nombre.html">Cambio Nombre Lugar</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/estadoCME.html">Cambio estado CME</a></li>
-                <li class="nav-item"><a class="nav-link" href="/lme.html">LME</a></li>
-
-            </ul>
-        </div>
-    </div>
-    </nav>
+                <ul class="nav nav-tabs" id="Mobile">
+                    <li class="nav-item active"> <a class="nav-link active" href="/CodId0.html">CodId 0</a></li>
+                    <!-- <li class="nav-item"> <a class="nav-link" href="/NoExiste.html">Bono No Existe</a></li> -->
+                    <li class="nav-item"> <a class="nav-link" href="/eliminar.html">Eliminar Liquidacion</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/nombre.html">Cambio Nombre Lugar</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/estadoCME.html">Cambio estado CME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/lme.html">LME</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
     <div class="container-fluid">
-        <section id="workspace">
             <div id="prest">
                 <label for="prestaciones">Prestacion</label>
                 <select name="prestaciones" class="custom-select my-1 mr-sm-2" id="prestaciones">
@@ -66,12 +63,8 @@
                     <input type="number" name="CorrPrestacion" id="CorrPrestacion" class="form-control" required>
                 </div>
             </div>
-
             <button type="button" id="generar" class="btn btn-primary" onclick="escribir()">Generar</button>
-        </section>
-
         <div class="well well-lg" id="escribe">
-
         </div>
         <button class="btn btn-default" onclick="copyToClipboard('#escribe')">Copiar</button>
     </div>

@@ -6,44 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Query Maker OperAnalistas</title>
-    <link type="text/css" rel="stylesheet" href="style/Querystyle.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="scripts/querys.js"></script>
 </head>
 
 <body>
-    <div>
-        <nav>
-            <div class="desktop-none"><a href="#Mobile">Ver Menu</a> </div>
-            <div class="desktop-none"><a href="">Ocultar Menu</a> </div>
-            <ul class="mobile-none" id="Mobile">
-                <li> <a href="/CodId0.html">CodId 0</a></li>
-                <!-- <li> <a href="/NoExiste.html">Bono No Existe</a></li> -->
-                <li> <a href="/eliminar.html">Eliminar Liquidacion</a></li>
-                <li> <a href="/nombre.html">Cambio Nombre Lugar</a></li>
-                <li> <a href="/estadoCME.html">Cambio estado CME</a></li>
-                <li><a href="/lme.html">LME</a></li>
-            </ul>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="nav nav-tabs" id="Mobile">
+                    <li class="nav-item"> <a class="nav-link" href="/CodId0.html">CodId 0</a></li>
+                    <!-- <li class="nav-item"> <a class="nav-link" href="/NoExiste.html">Bono No Existe</a></li> -->
+                    <li class="nav-item"> <a class="nav-link" href="/eliminar.html">Eliminar Liquidacion</a></li>
+                    <li class="nav-item active"> <a class="nav-link active" href="/nombre.html">Cambio Nombre Lugar</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="/estadoCME.html">Cambio estado CME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/lme.html">LME</a></li>
+                </ul>
+            </div>
         </nav>
     </div>
 
-    <section id="workspace">
-        <table>
-            <tr>
-                <th>Nuevo Nombre Convenio</th>
-                <th>CodIdConvenioVenta</th>
-            </tr>
-            <tr>
-                <td>
-                    <input type="text" name="nnombre" id="nnombre" required>
-                </td>
-                <td>
-                    <input type="number" name="CodIdConvenioVenta" id="CodIdConvenioVenta" required>
-                </td>
-            </tr>
-        </table>
-        <button type="button" id="generar" onclick="nombre()">Generar</button>
-    </section>
-    <div id="nombre">
+    <div class="container-fluid">
+        <div class="form-row">
+            <div class="col-md-3 mb-4">
+                <label for="nnombre">Nuevo Nombre</label>
+                <input type="text" name="nnombre" id="nnombre" class="form-control" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="CodIdConvenioVenta">CodIdConvenioVenta</label>
+                <input type="text" name="CodIdConvenioVenta" id="CodIdConvenioVenta" class="form-control" required>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="button" id="generar" onclick="nombre()">Generar</button>
+    </div>
+    <div class="well well-lg" id="nombre">
 
     </div>
 

@@ -8,7 +8,7 @@ function escribir() {
     switch (prestacion) {
         case '0':
             texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13893, CodPrestacionCertificador = '0306691',CodIdPrestacionHomologo = 47073,CodItemFinanciador = 0 " + vtaconvenio +
-                "update trbonoprestaciones set  CodIdPrestacionCertificador = 13893" + bonoprestacion;
+                "update trbonoprestaciones set  CodIdPrestacionCertificador = 13893" + bonoprestacion ;
             break;
 
         case '1':
