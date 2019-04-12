@@ -16,58 +16,65 @@
 
 <body>
     <div class="container-fluid">
-        <nav class="nav">
-            <!-- <div class="desktop-none"><a class="nav-link" href="#Mobile">Ver Menu</a> </div>
-            <div class="desktop-none"><a class="nav-link" href="">Ocultar Menu</a> </div> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="nav nav-tabs" id="Mobile">
-                <li class="nav-item"> <a class="nav-link active" href="/CodId0.html">CodId 0</a></li>
+                <li class="nav-item active"> <a class="nav-link active" href="/CodId0.html">CodId 0</a></li>
                 <!-- <li class="nav-item"> <a class="nav-link" href="/NoExiste.html">Bono No Existe</a></li> -->
                 <li class="nav-item"> <a class="nav-link" href="/eliminar.html">Eliminar Liquidacion</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/nombre.html">Cambio Nombre Lugar</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/estadoCME.html">Cambio estado CME</a></li>
                 <li class="nav-item"><a class="nav-link" href="/lme.html">LME</a></li>
+
             </ul>
-        </nav>
+        </div>
+    </div>
+    </nav>
     </div>
     <div class="container-fluid">
-    <section id="workspace">
-        <div id="prest">
-            <label for="prestaciones">Prestacion</label>
-            <select name="prestaciones" class="custom-select my-1 mr-sm-2" id="prestaciones">
-                <option value="0" id="0">306091</option>
-                <option value="1" id="1">306092</option>
-                <option value="2" id="2">305091</option>
-                <option value="3" id="3">305092</option>
-                <option value="4" id="4">308046</option>
-            </select>
+        <section id="workspace">
+            <div id="prest">
+                <label for="prestaciones">Prestacion</label>
+                <select name="prestaciones" class="custom-select my-1 mr-sm-2" id="prestaciones">
+                    <option value="0" id="0">306091</option>
+                    <option value="1" id="1">306092</option>
+                    <option value="2" id="2">305091</option>
+                    <option value="3" id="3">305092</option>
+                    <option value="4" id="4">308046</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3 mb-4">
+                    <label for="NumActoVenta">NumActoVenta</label>
+                    <input type="number" name="NumActoVenta" id="NumActoVenta" class="form-control" required>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <label for="CodIdVentaConvenio">CodIdVentaConvenio</label>
+                    <input type="number" name="CodIdVentaConvenio" id="CodIdVentaConvenio" class="form-control"
+                        required>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <label for="FolioBono">FolioBono</label>
+                    <input type="number" name="FolioBono" id="FolioBono" class="form-control" required>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <label for="CorrPrestacion">CorrPrestacion</label>
+                    <input type="number" name="CorrPrestacion" id="CorrPrestacion" class="form-control" required>
+                </div>
+            </div>
+
+            <button type="button" id="generar" class="btn btn-primary" onclick="escribir()">Generar</button>
+        </section>
+
+        <div class="well well-lg" id="escribe">
+
         </div>
-        <div class="form-row">
-        <div class="col-md-3 mb-4">
-            <label for="NumActoVenta">NumActoVenta</label>
-            <input type="number" name="NumActoVenta" id="NumActoVenta" class="form-control" required>
-        </div>
-        <div class="col-md-3 mb-4">
-            <label for="CodIdVentaConvenio">CodIdVentaConvenio</label>
-            <input type="number" name="CodIdVentaConvenio" id="CodIdVentaConvenio" class="form-control" required>
-        </div>
-        <div class="col-md-3 mb-4">
-            <label for="FolioBono">FolioBono</label>
-            <input type="number" name="FolioBono" id="FolioBono" class="form-control" required>
-        </div>
-        <div class="col-md-3 mb-4">
-            <label for="CorrPrestacion">CorrPrestacion</label>
-            <input type="number" name="CorrPrestacion" id="CorrPrestacion" class="form-control" required>
-        </div>
+        <button class="btn btn-default" onclick="copyToClipboard('#escribe')">Copiar</button>
     </div>
-
-        <button type="button" id="generar" class="btn btn-primary" onclick="escribir()">Generar</button>
-    </section>
-
-    <div class="well well-lg" id="escribe" >
-
-    </div>
-    <button onclick="copyToClipboard('#escribe')">Copiar</button>
-</div>
 
 
 </body>
