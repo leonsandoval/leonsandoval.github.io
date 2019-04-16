@@ -5,54 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>estadoCME</title>
-    <link type="text/css" rel="stylesheet" href="style/Querystyle.css">
+    <title>Query Maker OperAnalistas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="scripts/querys.js"></script>
 </head>
 
 <body>
-    <div>
-        <nav>
-            <div class="desktop-none"><a href="#Mobile">Ver Menu</a> </div>
-            <div class="desktop-none"><a href="">Ocultar Menu</a> </div>
-            <ul class="mobile-none" id="Mobile">
-                <li> <a href="/CodId0.html">CodId 0</a></li>
-                <!-- <li> <a href="/NoExiste.html">Bono No Existe</a></li> -->
-                <li> <a href="/eliminar.html">Eliminar Liquidacion</a></li>
-                <li> <a href="/nombre.html">Cambio Nombre Lugar</a></li>
-                <li> <a href="/estadoCME.html">Cambio estado CME</a></li>
-                <li><a href="/lme.html">LME</a></li>
-            </ul>
-        </nav>
+        <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="nav nav-tabs" id="Mobile">
+                            <li class="nav-item"> <a class="nav-link" href="/CodId0.html">CodId 0</a></li>
+                            <!-- <li class="nav-item"> <a class="nav-link" href="/NoExiste.html">Bono No Existe</a></li> -->
+                            <li class="nav-item"> <a class="nav-link" href="/eliminar.html">Eliminar Liquidacion</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/nombre.html">Cambio Nombre Lugar<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active"> <a class="nav-link active" href="/estadoCME.html">Cambio estado CME</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/lme.html">LME</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+    <div class="container-fluid">
+        <div class="form-row">
+            <div class="col-md-3 mb-4">
+                <label for="CtaMedId">CtaMedId</label>
+                <input type="number" name="CtaMedId" id="CtaMedId" class="form-control" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="EstadoID">EstadoID</label>
+                <input type="number" name="EstadoID" id="EstadoID" class="form-control" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="Fecha">Fecha</label>
+                <input type="date" name="Fecha" id="Fecha" class="form-control" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="Estado">Estado</label>
+                <input type="number" name="Estado" id="Estado" class="form-control" required>
+            </div>
+        </div>
+        <button type="button" id="generar" class="btn btn-primary" onclick="estado()">Generar</button>
     </div>
 
-    <section id="workspace">
-
-        <table>
-            <tr>
-                <th>CtaMedId</th>
-                <th>EstadoID</th>
-                <th>Fecha</th>
-                <th>Estado</th>
-            </tr>
-            <tr>
-                <td>
-                    <input type="number" name="CtaMedId" id="CtaMedId" required>
-                </td>
-                <td>
-                    <input type="number" name="EstadoID" id="EstadoID" required>
-                </td>
-                <td>
-                    <input type="date" name="Fecha" id="Fecha" required>
-                </td>
-                <td>
-                    <input type="number" name="Estado" id="Estado" required>
-                </td>
-            </tr>
-        </table>
-        <button type="button" id="generar" onclick="estado()">Generar</button>
-    </section>
-    <div id="estado">
+    <div class="well well-lg" id="estado">
 
     </div>
 </body>
