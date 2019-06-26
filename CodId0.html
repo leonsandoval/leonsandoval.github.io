@@ -33,6 +33,7 @@
             </div>
         </nav>
     </div>
+    <form class="needs-validation" novalidate>
     <div class="container-fluid">
             <div id="prest">
                 <label for="prestaciones">Prestacion</label>
@@ -48,19 +49,31 @@
                 <div class="col-md-3 mb-4">
                     <label for="NumActoVenta">NumActoVenta</label>
                     <input type="number" name="NumActoVenta" id="NumActoVenta" class="form-control" required>
+                    <div class="invalid-feedback">
+                            Ingresa el NumActoVenta de la prestacion
+                    </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <label for="CodIdVentaConvenio">CodIdVentaConvenio</label>
                     <input type="number" name="CodIdVentaConvenio" id="CodIdVentaConvenio" class="form-control"
                         required>
+                        <div class="invalid-feedback">
+                                Ingresa el CodIdVentaConvenio de la prestacion
+                        </div>
                 </div>
                 <div class="col-md-3 mb-4">
                     <label for="FolioBono">FolioBono</label>
                     <input type="number" name="FolioBono" id="FolioBono" class="form-control" required>
-                </div>
+                    <div class="invalid-feedback">
+                            Ingresa el FolioBono de la prestacion
+                    </div>
+                </div>                
                 <div class="col-md-3 mb-4">
                     <label for="CorrPrestacion">CorrPrestacion</label>
                     <input type="number" name="CorrPrestacion" id="CorrPrestacion" class="form-control" required>
+                    <div class="invalid-feedback">
+                            Ingresa el CorrPrestacion de la prestacion
+                    </div>
                 </div>
             </div>
             <button type="button" id="generar" class="btn btn-primary" onclick="escribir()">Generar</button>
@@ -68,7 +81,7 @@
         </div>
         <!-- <button class="btn btn-default" onclick="copyToClipboard('#escribe')">Copiar</button> -->
     </div>
-
+</form>
 
 </body>
 
