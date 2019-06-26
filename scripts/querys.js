@@ -87,7 +87,8 @@ function estado() {
 
 function nombre() {
     var nombre = document.getElementById("nombre");
-
+    
+    
 
     var texto = "UPDATE cfconvenioventa SET NombredelConvenio = '" + nnombre.value + "' WHERE CodIdConvenioVenta = " + CodIdConvenioVenta.value + ";" + "\n" +
         "UPDATE cfconveniopago SET NombredelConvenio = '" + nnombre.value + "' WHERE CodIdConvenioPago = " + CodIdConvenioVenta.value + ";";
@@ -112,31 +113,31 @@ function eliminarlme() {
 
 }
 
-function copyToClipboard(element) {
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val($(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
-}
+// function copyToClipboard(element) {
+//     var $temp = $("<input>");
+//     $("body").append($temp);
+//     $temp.val($(element).text()).select();
+//     document.execCommand("copy");
+//     $temp.remove();
+// }
 
-(function () {
-    'use strict';
-    window.addEventListener('load', function () {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('button', function (event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    }, false);
-})();
+// (function () {
+//     'use strict';
+//     window.addEventListener('load', function () {
+//         // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//         var forms = document.getElementsByClassName('needs-validation');
+//         // Loop over them and prevent submission
+//         var validation = Array.prototype.filter.call(forms, function (form) {
+//             form.addEventListener('button', function (event) {
+//                 if (form.checkValidity() === false) {
+//                     event.preventDefault();
+//                     event.stopPropagation();
+//                 }
+//                 form.classList.add('was-validated');
+//             }, false);
+//         });
+//     }, false);
+// })();
 
 function Upload() {
     var fileUpload = document.getElementById("fileUpload");
@@ -186,7 +187,7 @@ function escribirmass() {
         const vtaconvenio = " where NumActoVenta = " + NumActoVenta + " and CodIdVentaConvenio =" + CodIdVentaConvenio + " and CorrPrestacion =" + CorrPrestacion + ";" + "\n" + "\n";
         const bonoprestacion = " where NumActoVenta = " + NumActoVenta + " and CodIdVentaConvenio =" + CodIdVentaConvenio + " and FolioBono = " + FolioBono + " and CorrPrestacion =" + CorrPrestacion + ";" + "\n" + "\n";
 
-        console.log(prestacion)
+        //console.log(prestacion)
 
         switch (prestacion.trim()) {
             case "0306091":
@@ -233,3 +234,5 @@ function escribirmass() {
         escribe.innerText += texto;
     }
 }
+
+
