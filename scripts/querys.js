@@ -1,3 +1,4 @@
+// Esta funcion escribe la query segun los parametros que ingresados en el form para los bonos con CodId 0
 function escribir() {
     var escribe = document.getElementById("escribe");
     var vtaconvenio = " where NumActoVenta = " + NumActoVenta.value + " and CodIdVentaConvenio =" + CodIdVentaConvenio.value + " and CorrPrestacion =" + CorrPrestacion.value + ";" + "\n" + "\n";
@@ -5,6 +6,7 @@ function escribir() {
     var prestacion = document.getElementById('prestaciones').value;
     var texto = 'texto';
 
+    //dependiendo del codigo de prestacion seleccionado es el CodIdPrestacionCertificador que se escribe
     switch (prestacion) {
         case '0':
             texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13893, CodPrestacionCertificador = '0306691',CodIdPrestacionHomologo = 47073,CodItemFinanciador = 0 " + vtaconvenio +
@@ -41,7 +43,7 @@ function escribir() {
 
 }
 
-
+// Esta funcion escribe la query para eliminar la liquidacion erronea ingresada en el form
 function eliminar() {
     var eliminar = document.getElementById("eliminar");
 
@@ -63,12 +65,11 @@ function eliminar() {
 
 }
 
-
+// Esta funcion escribe la query para el cambio de estado de CME
 function estado() {
     var estado = document.getElementById("estado");
 
-
-
+// El estado 16(fuera de flujo) ademas deja la vigencia en 0
     if (Estado.value == "16") {
         var texto = "INSERT INTO cfncmeestado(CtaMedID, EstadoID, FecModEstado, FecModRegistro, UsuModRegistro, EstCod, NombreResponsable, Observacion, FecPago, MtoDescuadre) VALUES (" +
             CtaMedId.value + ", " + EstadoID.value + ", '" + Fecha.value + "', '" + Fecha.value + "', 'op'," + Estado.value + ", 'IMED', 'Cambio de estado solicitado', '1900-01-01', 0);" + "\n" +
@@ -84,21 +85,18 @@ function estado() {
 
 }
 
-
+// Esta funcion escribe la query para cambiar el nombre de los convenios
 function nombre() {
-    var nombre = document.getElementById("nombre");
-    
-    
+    var nombre = document.getElementById("nombre");    
 
     var texto = "UPDATE cfconvenioventa SET NombredelConvenio = '" + nnombre.value + "' WHERE CodIdConvenioVenta = " + CodIdConvenioVenta.value + ";" + "\n" +
         "UPDATE cfconveniopago SET NombredelConvenio = '" + nnombre.value + "' WHERE CodIdConvenioPago = " + CodIdConvenioVenta.value + ";";
-
 
     nombre.innerText = texto;
 
 }
 
-
+// Esta funcion escribe la query para eliminar la LME ingresada en el form
 function eliminarlme() {
     var eliminarlme = document.getElementById("eliminarlme");
 
@@ -113,6 +111,7 @@ function eliminarlme() {
 
 }
 
+//era una funcion simple para copiar todo el contenido del div
 // function copyToClipboard(element) {
 //     var $temp = $("<input>");
 //     $("body").append($temp);
@@ -121,6 +120,8 @@ function eliminarlme() {
 //     $temp.remove();
 // }
 
+
+// funcion para añadir validaciones al formulario, no aportaba al caso
 // (function () {
 //     'use strict';
 //     window.addEventListener('load', function () {
@@ -139,8 +140,10 @@ function eliminarlme() {
 //     }, false);
 // })();
 
+//encontre esta funcion que permite subir un archivo csv
 function Upload() {
     var fileUpload = document.getElementById("fileUpload");
+    //caracteres que se permitiran en el nombre del archivo
     var regex = /^([a-zA-Z0-9\s_\\.\-:()])+(.csv|.txt)$/;
     if (regex.test(fileUpload.value.toLowerCase())) {
         if (typeof (FileReader) != "undefined") {
