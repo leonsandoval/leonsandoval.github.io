@@ -54,10 +54,15 @@ body{
     margin:0 5px 0 0;
     padding:2px;
 }
-  
+
+.tile:hover{
+    background: aqua;
+}
+
 .tileLargo{
     width:205px;
 }
+
 
 .amarillo{
     background:rgb(248, 252, 48);
