@@ -249,7 +249,7 @@ function downloadInnerHtml(filename, elId, mimeType) {
     link.click();
 }
 
-var fileName = 'tags.txt'; // You can use the .txt extension if you want
+var fileName = 'codid0.txt'; // You can use the .txt extension if you want
 
 $('#downloadLink').click(function () {
     downloadInnerHtml(fileName, 'escribe', 'text/html');
