@@ -69,7 +69,7 @@ function eliminar() {
 function estado() {
     var estado = document.getElementById("estado");
 
-// El estado 16(fuera de flujo) ademas deja la vigencia en 0
+    // El estado 16(fuera de flujo) ademas deja la vigencia en 0
     if (Estado.value == "16") {
         var texto = "INSERT INTO cfncmeestado(CtaMedID, EstadoID, FecModEstado, FecModRegistro, UsuModRegistro, EstCod, NombreResponsable, Observacion, FecPago, MtoDescuadre) VALUES (" +
             CtaMedId.value + ", " + EstadoID.value + ", '" + Fecha.value + "', '" + Fecha.value + "', 'op'," + Estado.value + ", 'IMED', 'Cambio de estado solicitado', '1900-01-01', 0);" + "\n" +
@@ -87,7 +87,7 @@ function estado() {
 
 // Esta funcion escribe la query para cambiar el nombre de los convenios
 function nombre() {
-    var nombre = document.getElementById("nombre");    
+    var nombre = document.getElementById("nombre");
 
     var texto = "UPDATE cfconvenioventa SET NombredelConvenio = '" + nnombre.value + "' WHERE CodIdConvenioVenta = " + CodIdConvenioVenta.value + ";" + "\n" +
         "UPDATE cfconveniopago SET NombredelConvenio = '" + nnombre.value + "' WHERE CodIdConvenioPago = " + CodIdConvenioVenta.value + ";";
@@ -121,24 +121,7 @@ function eliminarlme() {
 // }
 
 
-// funcion para añadir validaciones al formulario, no aportaba al caso
-// (function () {
-//     'use strict';
-//     window.addEventListener('load', function () {
-//         // Fetch all the forms we want to apply custom Bootstrap validation styles to
-//         var forms = document.getElementsByClassName('needs-validation');
-//         // Loop over them and prevent submission
-//         var validation = Array.prototype.filter.call(forms, function (form) {
-//             form.addEventListener('button', function (event) {
-//                 if (form.checkValidity() === false) {
-//                     event.preventDefault();
-//                     event.stopPropagation();
-//                 }
-//                 form.classList.add('was-validated');
-//             }, false);
-//         });
-//     }, false);
-// })();
+
 
 //encontre esta funcion que permite subir un archivo csv
 function Upload() {
@@ -191,7 +174,7 @@ function escribirmass() {
         const bonoprestacion = " where NumActoVenta = " + NumActoVenta + " and CodIdVentaConvenio =" + CodIdVentaConvenio + " and FolioBono = " + FolioBono + " and CorrPrestacion =" + CorrPrestacion + ";" + "\n" + "\n";
 
         //console.log(prestacion)
-
+        //prestacion venia con espacios en blanco al final...
         switch (prestacion.trim()) {
             case "0306091":
                 texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13893, CodPrestacionCertificador = '0306691',CodIdPrestacionHomologo = 47073,CodItemFinanciador = 0 " + vtaconvenio +
@@ -239,6 +222,7 @@ function escribirmass() {
 }
 
 
+//funcion para descargar el contenido de un div en txt, desafortunadamente, incluye los <br> y se escribe todo en una linea
 function downloadInnerHtml(filename, elId, mimeType) {
     var elHtml = document.getElementById(elId).innerHTML;
     var link = document.createElement('a');
@@ -249,9 +233,9 @@ function downloadInnerHtml(filename, elId, mimeType) {
     link.click();
 }
 
-var fileName = 'codid0.txt'; // You can use the .txt extension if you want
+var fileName = 'cod.txt';
 
 $('#downloadLink').click(function () {
-    downloadInnerHtml(fileName, 'escribe', 'text/html');
+    downloadInnerHtml(fileName, 'escribe', 'text/plain');
 });
 
