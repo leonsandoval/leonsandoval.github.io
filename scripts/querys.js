@@ -18,17 +18,17 @@ function escribir() {
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = 13899" + bonoprestacion;
             break;
 
-        case '2':
+        case '4':
             texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13956, CodPrestacionCertificador = '0308646',CodIdPrestacionHomologo = 47124,CodItemFinanciador = 0" + vtaconvenio +
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = 13956" + bonoprestacion;
             break;
 
-        case '3':
+        case '2':
             texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 16720, CodPrestacionCertificador = '0305691',CodIdPrestacionHomologo = 59224,CodItemFinanciador = 0" + vtaconvenio +
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = 16720" + bonoprestacion;
             break;
 
-        case '4':
+        case '3':
             texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 16726, CodPrestacionCertificador = '0305692',CodIdPrestacionHomologo = 59227,CodItemFinanciador = 0" + vtaconvenio +
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = 16726" + bonoprestacion;
             break;
@@ -180,39 +180,25 @@ function escribirmass() {
                 texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13893, CodPrestacionCertificador = '0306691',CodIdPrestacionHomologo = 47073,CodItemFinanciador = 0 " + vtaconvenio +
                     "update trbonoprestaciones set  CodIdPrestacionCertificador = 13893" + bonoprestacion;
                 break;
-            case "306091":
-                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13893, CodPrestacionCertificador = '0306691',CodIdPrestacionHomologo = 47073,CodItemFinanciador = 0 " + vtaconvenio +
-                    "update trbonoprestaciones set  CodIdPrestacionCertificador = 13893" + bonoprestacion;
-                break;
             case "0306092":
                 texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13899, CodPrestacionCertificador = '0306692',CodIdPrestacionHomologo = 47088,CodItemFinanciador = 0" + vtaconvenio +
                     "update trbonoprestaciones set  CodIdPrestacionCertificador = 13899" + bonoprestacion;
                 break;
-            case "306092":
-                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13899, CodPrestacionCertificador = '0306692',CodIdPrestacionHomologo = 47088,CodItemFinanciador = 0" + vtaconvenio +
-                    "update trbonoprestaciones set  CodIdPrestacionCertificador = 13899" + bonoprestacion;
+
+            case "0308046":
+                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13956, CodPrestacionCertificador = '0308646',CodIdPrestacionHomologo = 47124,CodItemFinanciador = 0" + vtaconvenio +
+                    "update trbonoprestaciones set  CodIdPrestacionCertificador = 13956" + bonoprestacion;
                 break;
             case "0305091":
-                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13956, CodPrestacionCertificador = '0308646',CodIdPrestacionHomologo = 47124,CodItemFinanciador = 0" + vtaconvenio +
-                    "update trbonoprestaciones set  CodIdPrestacionCertificador = 13956" + bonoprestacion;
-                break;
-            case "305091":
-                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13956, CodPrestacionCertificador = '0308646',CodIdPrestacionHomologo = 47124,CodItemFinanciador = 0" + vtaconvenio +
-                    "update trbonoprestaciones set  CodIdPrestacionCertificador = 13956" + bonoprestacion;
-                break;
-            case "0305092":
                 texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 16720, CodPrestacionCertificador = '0305691',CodIdPrestacionHomologo = 59224,CodItemFinanciador = 0" + vtaconvenio +
                     "update trbonoprestaciones set  CodIdPrestacionCertificador = 16720" + bonoprestacion;
                 break;
 
-            case "0308046":
+            case "0305092":
                 texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 16726, CodPrestacionCertificador = '0305692',CodIdPrestacionHomologo = 59227,CodItemFinanciador = 0" + vtaconvenio +
                     "update trbonoprestaciones set  CodIdPrestacionCertificador = 16726" + bonoprestacion;
                 break;
-            case "308046":
-                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 16726, CodPrestacionCertificador = '0305692',CodIdPrestacionHomologo = 59227,CodItemFinanciador = 0" + vtaconvenio +
-                    "update trbonoprestaciones set  CodIdPrestacionCertificador = 16726" + bonoprestacion;
-                break;
+
             default:
                 texto = "Prestacion no reconocida";
                 break;
