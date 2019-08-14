@@ -17,7 +17,7 @@ function escribir() {
             texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13899, CodPrestacionCertificador = '0306692',CodIdPrestacionHomologo = 47088,CodItemFinanciador = 0" + vtaconvenio +
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = 13899" + bonoprestacion;
             break;
-            
+
         case '2':
             texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 16720, CodPrestacionCertificador = '0305691',CodIdPrestacionHomologo = 59224,CodItemFinanciador = 0" + vtaconvenio +
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = 16720" + bonoprestacion;
@@ -128,6 +128,7 @@ function Upload() {
     var fileUpload = document.getElementById("fileUpload");
     //caracteres que se permitiran en el nombre del archivo
     var regex = /^([a-zA-Z0-9\s_\\.\-:()])+(.csv|.txt)$/;
+    
     if (regex.test(fileUpload.value.toLowerCase())) {
         if (typeof (FileReader) != "undefined") {
             var reader = new FileReader();
