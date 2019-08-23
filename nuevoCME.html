@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Query Maker OperAnalistas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/querys.js"></script>
+</head>
+
+<body class="container">
+        <div class="container-fluid">
+            <!-- menu de navegacion superior -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="nav nav-tabs" id="Mobile">
+                            <li class="nav-item"> <a class="nav-link" href="/massCodId0.html">MassCodId 0</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/CodId0.html">CodId 0</a></li>
+                            <!-- <li class="nav-item"> <a class="nav-link" href="/NoExiste.html">Bono No Existe</a></li> -->
+                            <li class="nav-item"> <a class="nav-link" href="/eliminar.html">Eliminar Liquidacion</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="/nombre.html">Cambio Nombre Lugar<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link " href="/estadoCME.html">Cambio estado CME</a></li>
+                            <li class="nav-item active"> <a class="nav-link active" href="/nuevoCME.html">Nuevo CME</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/lme.html">LME</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+    <div class="container-fluid">
+        <div class="form-row">
+            <div class="col-md-3 mb-4">
+                <label for="CodFin">Codigo Financiador</label>
+                <input type="number" name="CodFin" id="CodFin" class="form-control" value=1 required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="RutConvenio">Rut Prestador</label>
+                <input type="text" name="RutConvenio" id="RutConvenio" class="form-control" placeholder="0000000000-0" maxlength="12" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="CodLugar">Codigo Lugar</label>
+                <input type="number" name="CodLugar" id="CodLugar" class="form-control" placeholder="12345" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="NombreConvenio">NombreConvenio</label>
+                <input type="text" name="NombreConvenio" id="NombreConvenio" class="form-control" placeholder="Nombre del Convenio" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="HomNumeroConvenio">HomNumeroConvenio</label>
+                <input type="text" name="HomNumeroConvenio" id="HomNumeroConvenio" class="form-control" title="Se encuentra en mantenedor o tabla cfconvenioventa bono3" value="NULL" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="HomLugarConvenio">HomLugarConvenio</label>
+                <input type="text" name="HomLugarConvenio" id="HomLugarConvenio" class="form-control" title="Se encuentra en mantenedor o tabla cfconvenioventa bono3" value="NULL" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="CodSucVenta">CodSucVenta</label>
+                <input type="text" name="CodSucVenta" id="CodSucVenta" class="form-control"  title="Se encuentra en mantenedor o tabla cfconvenioventa bono3" value="NULL" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="CodArancelInterface">CodArancelInterface</label>
+                <input type="text" name="CodArancelInterface" id="CodArancelInterface" class="form-control"  title="Se encuentra en mantenedor o tabla cfconvenioventa bono3" value="NULL" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="FecInicio">FecInicio</label>
+                <input type="date" name="FecInicio" id="FecInicio" class="form-control" onblur="CME()" required>
+            </div>
+            <div class="col-md-3 mb-4">
+                <label for="FecFin">FecFin</label>
+                <input type="date" name="FecFin" id="FecFin" class="form-control" onblur="CME()" required>
+            </div>
+        </div>
+        <button type="button" id="generar" class="btn btn-primary" onclick="CME()">Generar</button>
+    </div>
+
+    <div class="well well-lg" id="CME">
+
+    </div>
+</body>
+
+</html>

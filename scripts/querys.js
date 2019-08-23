@@ -226,3 +226,23 @@ $('#downloadLink').click(function () {
     downloadInnerHtml(fileName, 'escribe', 'text/plain');
 });
 
+
+
+function CME() {
+    var CME = document.getElementById("CME");
+
+    var texto = "\n" + "\n"+"***** USAR SOLO LOS INSERT QUE NO ESTEN CREADOS DE ANTEMANO ***** "+"\n" + "\n"+"\n" + "\n"+
+        "INSERT INTO prmlugarpam(CodFinanciador, CodLugar, RutConvenio, extHomLugarConvenio, extSucVenta) VALUES("+
+        CodFin.value+ ", " +CodLugar.value+ ", '" +RutConvenio.value + "', '" +HomLugarConvenio.value+ "', '" +CodSucVenta.value+"');"+ "\n" + "\n"+
+        "INSERT INTO cmefincnvxml(CodFinanciador, RutConvenio) VALUES("+CodFin.value+", '" +RutConvenio.value + "');"+ "\n" + "\n"+
+        "INSERT INTO convenioctamedica(CedPrestador, CodFinanciador, CodLugar, CorrConvenio, NombredelConvenio, CodArancelInterface, HomNumeroConvenio, HomLugarConvenio, AtrCargaCuentas, FecInicioVigencia, FecFinVigencia, AtrEstadosVigencia, CedModificacion, FecActualizacion)VALUES('"+
+        RutConvenio.value+ "', "+ CodFin.value+ ", " +CodLugar.value+", 1 , '" +NombreConvenio.value+ "', '" +CodArancelInterface.value+ "', '" +HomNumeroConvenio.value+ "', '" +HomLugarConvenio.value+ "', 1 ,'" +FecInicio.value+  "', '" +FecFin.value +  "', 1, '0000000000-0', now() );"+ "\n" + "\n"+
+        "INSERT INTO cmlugares(CodLugar, NombreLugar, AtrTiposDireccion, GloDireccion, DepNumero, Email, AtrCodigosRegion, CodComuna, AtrNombrePaises, CodAreaTelefono, NumTelefono, NumFax, FecInicioVigencia, FecFinVigencia, AtrEstadosVigencia, AtrFinanciadorFull, AtrNombrePaisesCedMod, AtrTiposIdentificacionCedMod, CedModificacion, FecActualizacion) VALUES("+
+        CodLugar.value+ ", '" +NombreConvenio.value+"', 1, 'NULL', 0, 'NULL', 0, 0, 56, 'NULL', 'NULL', 'NULL', '"+ FecInicio.value+  "', '" +FecFin.value +  "',1, 2, 56, 1, '0000000000-0', now() );"+"\n" + "\n"+
+        "INSERT INTO cmprestadores(CedPrestador, NombrePrestador, FecInicioVigencia, FecFinVigencia, AtrEstadosVigencia, CedModificacion, FecActualizacion) VALUES('"+
+        RutConvenio.value + "', '" + NombreConvenio.value+ "', '" +FecInicio.value+  "', '" +FecFin.value +  "',1, '0000000000-0', now() );"+ "\n" + "\n"
+        
+    
+    CME.innerText = texto;
+
+}
