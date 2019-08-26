@@ -241,8 +241,21 @@ function CME() {
         CodLugar.value+ ", '" +NombreConvenio.value+"', 1, 'NULL', 0, 'NULL', 0, 0, 56, 'NULL', 'NULL', 'NULL', '"+ FecInicio.value+  "', '" +FecFin.value +  "',1, 2, 56, 1, '0000000000-0', now() );"+"\n" + "\n"+
         "INSERT INTO cmprestadores(CedPrestador, NombrePrestador, FecInicioVigencia, FecFinVigencia, AtrEstadosVigencia, CedModificacion, FecActualizacion) VALUES('"+
         RutConvenio.value + "', '" + NombreConvenio.value+ "', '" +FecInicio.value+  "', '" +FecFin.value +  "',1, '0000000000-0', now() );"+ "\n" + "\n"
-        
-    
+            
     CME.innerText = texto;
-
 }
+
+function noExiste(){
+    var noExiste = document.getElementById("noExiste");
+    var ele = document.getElementsByName('entidad');
+    for(i=0;i<ele.length; i++){
+    if(ele[i].checked)
+    var texto ="UPDATE trseguimiento SET AtrEstadoConciliacion =2 WHERE FolioBono = "+FolioBono.value + " and CodIdVentaConvenio =" + CodIdVentaConvenio.value + " and CodEntidad= " + codEntidad.value + " and AtrEntidadConciliar="+ ele[i].value +";"
+    } 
+    noExiste.innerText = texto;
+}
+
+
+$(function(){
+    $("#nav-placeholder").load("nav.html");
+  });

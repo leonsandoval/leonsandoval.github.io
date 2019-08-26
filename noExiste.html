@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -22,28 +22,32 @@
     <div class="container-fluid">
         <div class="form-row">
             <div class="col-md-3 mb-4">
-                <label for="CtaMedId">CtaMedId</label>
-                <input type="number" name="CtaMedId" id="CtaMedId" class="form-control" required>
+                <label for="FolioBono">Folio Bono</label>
+                <input type="text" name="FolioBono" id="FolioBono" class="form-control" required>
             </div>
             <div class="col-md-3 mb-4">
-                <label for="EstadoID">EstadoID</label>
-                <input type="number" name="EstadoID" id="EstadoID" class="form-control" required>
+                <label for="CodIdVentaConvenio">CodIdVentaConvenio</label>
+                <input type="text" name="CodIdVentaConvenio" id="CodIdVentaConvenio" class="form-control"  required>
             </div>
             <div class="col-md-3 mb-4">
-                <label for="Fecha">Fecha</label>
-                <input type="date" name="Fecha" id="Fecha" class="form-control" required>
+                <label for="codEntidad">Codigo Entidad</label>
+                <input type="text" name="codEntidad" id="codEntidad" class="form-control" required>
             </div>
             <div class="col-md-3 mb-4">
-                <label for="Estado">Estado</label>
-                <input type="number" name="Estado" id="Estado" class="form-control" onblur="estado()" required>
-            </div>
+                <input type="radio" id="fin" name="entidad" value="1" checked>
+                <label for="fin">Financiador</label>
+<br>
+                <input type="radio" id="cia" name="entidad" value="3">
+                <label for="cia">Compañia</label>
+              </div>
+
         </div>
-        <button type="button" id="generar" class="btn btn-primary" onclick="estado()">Generar</button>
+        <button class="btn btn-primary" type="button" id="generar" onclick="noExiste()">Generar</button>
+    </div>
+    <div class="well well-lg" id="noExiste">
+
     </div>
 
-    <div class="well well-lg" id="estado">
-
-    </div>
 </body>
 
 </html>
