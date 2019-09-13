@@ -101,10 +101,14 @@ function eliminarlme() {
     var eliminarlme = document.getElementById("eliminarlme");
 
 
-    var texto = "DELETE FROM licencia_estado WHERE id_licencia =" + IdLicencia.value + " AND codigo_estado_oficial = 11 ;" + "\n" +
+    var texto = 
+    "Para 'folio mal consumido'"+ "\n" +"\n" +
+    "DELETE FROM licencia_estado WHERE id_licencia =" + IdLicencia.value + " AND codigo_estado_oficial = 11 ;" + "\n" +
         "DELETE FROM licencia_estado_traza WHERE id_licencia =" + IdLicencia.value + " AND codigo_estado_oficial = 11 ;" + "\n" +
         "DELETE FROM licencia_ccaf WHERE id_licencia =" + IdLicencia.value + ";" + "\n" +
-        "UPDATE licencias  SET codigo_estado_oficial = 1 WHERE id_licencia =" + IdLicencia.value + ";";
+        "UPDATE licencias  SET codigo_estado_oficial = 1 WHERE id_licencia =" + IdLicencia.value + ";"+ "\n" + "\n" + "\n" +
+        "******************            solo para   '103|La Ocupacion es 19:OTRO'                       ********************"+ "\n" +"\n" +
+        "UPDATE licencias SET ocupacion_otro = ' - ' WHERE id_licencia= "+ IdLicencia.value + ";"+"\n"  ;
 
 
     eliminarlme.innerText = texto;
