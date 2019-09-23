@@ -210,8 +210,9 @@ function escribirmass() {
                 break;
 
             case "0306082":
-                    texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13965, CodPrestacionCertificador = '0306682',CodIdPrestacionHomologo = 47136,CodItemFinanciador = 0" + vtaconvenio +
+                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13965, CodPrestacionCertificador = '0306682',CodIdPrestacionHomologo = 47136,CodItemFinanciador = 0" + vtaconvenio +
                     "update trbonoprestaciones set  CodIdPrestacionCertificador = 13965" + bonoprestacion;
+                break;
 
             default:
                 texto = "Prestacion no reconocida";
