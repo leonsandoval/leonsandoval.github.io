@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Query Maker OperAnalistas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/querys.js"></script>
+</head>
+
+<body class="container">
+    <!-- menu de navegacion superior -->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="form-row">
+            <div class="col-md-3 mb-4">
+                <label for="validar">Validar caracteres CME</label>
+                <textarea name="validar" id="validar" cols="150" rows="20"></textarea>
+                <input type="button" value="buscar"  onclick="validar()" >
+            </div>
+        </div>
+     </div>
+
+    <div class="well well-lg" id="mal">
+
+    </div>
+
+</body>
+
+</html>

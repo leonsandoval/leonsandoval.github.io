@@ -273,3 +273,12 @@ function noExiste(){
 $(function(){
     $("#nav-placeholder").load("nav.html");
   });
+
+
+function validar(){
+    var mal = document.getElementById("mal");
+    var validar = document.getElementById("validar").value;
+    var validos= /[^\000-\177\ñ\á\à\ä\â\í\ì\ï\i\é\è\ë\ê\ó\ò\ö\ô\ú\ù\ü\û\'\¡\ª\°\º\´\¿\·\>\<\ç\¦\½\¼\®\¨\¾\μ\\]/i;
+    var texto = validar.search(validos);
+    mal.innerText = texto;
+}
