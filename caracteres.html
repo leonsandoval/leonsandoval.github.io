@@ -17,16 +17,13 @@
     <!-- menu de navegacion superior -->
     <div id="nav-placeholder">
 
-    </div>
-
-    <div class="container-fluid">
-        <div class="form-row">
-            <div class="col-md-3 mb-4">
+    </div>  
+            <div class="container-fluid">
                 <label for="validar">Validar caracteres CME</label>
-                <textarea name="validar" id="validar" cols="150" rows="20"></textarea>
-                <input type="button" value="buscar"  onclick="validar()" >
+                <textarea name="validar" id="validar" onkeyup="countChars(this);" cols="150" rows="20" class="form-control"></textarea>
+                <p id="charNum" >0 characters</p>
+                <input type="button" value="buscar" class="btn btn-primary" onclick="validar()" >
             </div>
-        </div>
      </div>
 
     <div class="well well-lg" id="mal">
