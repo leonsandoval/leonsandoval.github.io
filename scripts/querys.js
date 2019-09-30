@@ -281,7 +281,10 @@ function validar(){
     var validos= /[^\000-\177\ñ\á\à\ä\â\í\ì\ï\i\é\è\ë\ê\ó\ò\ö\ô\ú\ù\ü\û\'\¡\ª\°\º\´\¿\·\>\<\ç\¦\½\¼\®\¨\¾\μ\\]/i;//caracteres reconocidos 
     var indice = validar.search(validos);//busca el indice del caracter no incluido
     var caracter = validar.match(validos);//busca el caracter no incluido
+    if(indice>0)
     var texto="El caracter "+caracter+" no es valido, y se encuentra en la posicion "+indice+" del texto ingresado"
+    else
+    var texto = "No se encontro caracter erroneo"
     mal.innerText = texto;
 }
 
@@ -289,3 +292,26 @@ function countChars(obj){
     document.getElementById("charNum").innerHTML = obj.value.length+' characters';
 }
 
+
+
+// Check for the various File API support.
+if (window.File && window.FileReader && window.FileList && window.Blob) {
+    function showFile() {
+        //donde mostrar texto
+       var preview = document.getElementById('validar');
+       var file = document.querySelector('input[type=file]').files[0];
+       var reader = new FileReader()
+
+       var textFile = /.*/;
+
+       if (file.type.match(textFile)) {
+          reader.onload = function (event) {
+             preview.innerHTML = event.target.result;
+          }
+       } else {
+          preview.innerHTML = "parece que el archivo no es de texto";
+       }
+       reader.readAsText(file);
+    }
+ } else {
+    alert("Tu navegador es muy antiguo para soportar la api de archivos html ")}

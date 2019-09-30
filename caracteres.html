@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="ANSI">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Query Maker OperAnalistas</title>
@@ -19,16 +19,24 @@
 
     </div>  
             <div class="container-fluid">
-                <label for="validar">Validar caracteres CME</label>
-                <textarea name="validar" id="validar" onkeyup="countChars(this);" cols="150" rows="20" class="form-control"></textarea>
-                <p id="charNum" >0 characters</p>
-                <input type="button" value="buscar" class="btn btn-primary" onclick="validar()" >
+                <form action="/action_page.php" accept-charset="UTF-8"></form>
+                    <label for="validar">Validar caracteres CME</label>
+                    <textarea name="validar" id="validar" character-set="UTF-8" onkeyup="countChars(this)"  class="form-control"></textarea>                    
+                    <p id="charNum" >0 characters</p>
+                    <input type="file" accept="text/*" onchange="showFile()">
+                    <input type="button" value="buscar" class="btn btn-primary" onclick="validar()" >
+                </form>   
             </div>
      </div>
+
 
     <div class="well well-lg" id="mal">
 
     </div>
+
+
+    
+    
 
 </body>
 
