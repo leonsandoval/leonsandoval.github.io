@@ -2,32 +2,59 @@
 <html lang="en">
 
 <head>
-
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
-<body >
-    <div class="container-fluid">
-        <!-- menu de navegacion superior -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="Mobile">
-                    <li class="nav-item"> <a class="nav-link" href="/massCodId0.html">MassCodId 0</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="/CodId0.html">CodId 0</a></li>
-                    <li class="nav-item "> <a class="nav-link " href="/noExiste.html">Bono No Existe</a></li>
-                    <li class="nav-item "> <a class="nav-link " href="/nombre.html">Nombre Lugar</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="/eliminar.html">Eliminar Liq</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/lme.html">LME</a></li>                   
-                    <li class="nav-item"> <a class="nav-link" href="/estadoCME.html">Cambio estado CME</a></li>
-                    <li class="nav-item "> <a class="nav-link " href="/nuevoCME.html">Nuevo CME</a></li>                    
-                    <li class="nav-item"><a class="nav-link" href="/caracteres.html">Caracteres CME</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</body>
+<body>
+<nav class="navbar-expand-md bg-dark navbar-dark">
+         <a class="navbar-brand" href="#">Querymaker</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+         aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+     </button>
+ 
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+                 <a class="nav-link" href="lme.html">LME</a>
+             </li>
+             <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false">
+                     Bono
+                 </a>
+                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" href="massCodId0.html">MassCodId 0</a>
+                     <a class="dropdown-item" href="CodId0.html">CodId 0</a>
+                     <a class="dropdown-item" href="noExiste.html">Bono No Existe</a>    
+                     <a class="dropdown-item" href="nombre.html">Nombre Lugar</a>
+                     <a class="dropdown-item" href="eliminar.html">Eliminar Liquidacion</a>                  
+                 </div>
+             </li>
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    CME
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="estadoCME.html">Cambio estado CME</a>
+                    <a class="dropdown-item" href="nuevoCME.html">Nuevo Lugar CME</a>
+                    <a class="dropdown-item" href="caracteres.html">Validador Caracteres CME</a>                     
+                </div>
+            </li>
+
+         </ul>
+         <!-- <form class="form-inline my-2 my-lg-0">
+             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+         </form> -->
+     </div>
+ </nav>
+ </body>
 
 </html>
