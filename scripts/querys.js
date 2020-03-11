@@ -37,6 +37,10 @@ function escribir() {
                 texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13965, CodPrestacionCertificador = '0306682',CodIdPrestacionHomologo = 47136,CodItemFinanciador = 0" + vtaconvenio +
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = 13965" + bonoprestacion;
         break;
+       case '6':
+                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 27044, CodPrestacionCertificador = '0305883',CodIdPrestacionHomologo = 163718,CodItemFinanciador = 0" + vtaconvenio +
+                "update trbonoprestaciones set  CodIdPrestacionCertificador = 27044" + bonoprestacion;
+        break;
 
         default:
             texto = "Selecciona una Prestacion";
