@@ -42,6 +42,10 @@ function escribir() {
                 texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 27044, CodPrestacionCertificador = '0305883',CodIdPrestacionHomologo = 163718,CodItemFinanciador = 0" + vtaconvenio +
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = 27044" + bonoprestacion;
              break;
+        case '7':
+                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 27047, CodPrestacionCertificador = '0305884',CodIdPrestacionHomologo = 163721,CodItemFinanciador = 0" + vtaconvenio +
+                "update trbonoprestaciones set  CodIdPrestacionCertificador = 27047" + bonoprestacion;
+             break;
 
         default:
             texto = "Selecciona una Prestacion";
@@ -218,6 +222,14 @@ function escribirmass() {
                 texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 13965, CodPrestacionCertificador = '0306682',CodIdPrestacionHomologo = 47136,CodItemFinanciador = 0" + vtaconvenio +
                     "update trbonoprestaciones set  CodIdPrestacionCertificador = 13965" + bonoprestacion;
                 break;
+            case "0305094":
+                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 27044, CodPrestacionCertificador = '0305883',CodIdPrestacionHomologo = 163718,CodItemFinanciador = 0" + vtaconvenio +
+                "update trbonoprestaciones set  CodIdPrestacionCertificador = 27044" + bonoprestacion;
+             break;
+            case "0305095":
+                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 27047, CodPrestacionCertificador = '0305884',CodIdPrestacionHomologo = 163721,CodItemFinanciador = 0" + vtaconvenio +
+                "update trbonoprestaciones set  CodIdPrestacionCertificador = 27047" + bonoprestacion;
+             break;
 
             default:
                 texto = "Prestacion no reconocida";
