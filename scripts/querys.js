@@ -46,6 +46,17 @@ function escribir() {
                 texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 27047, CodPrestacionCertificador = '0305884',CodIdPrestacionHomologo = 163721,CodItemFinanciador = 0" + vtaconvenio +
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = 27047" + bonoprestacion;
              break;
+        case '8':
+                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 28152, CodPrestacionCertificador = '0601118',CodIdPrestacionHomologo = 166167,CodItemFinanciador = 0" + vtaconvenio +
+                "update trbonoprestaciones set  CodIdPrestacionCertificador = 28152" + bonoprestacion;
+             break;
+            
+        case '9':
+                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 28155, CodPrestacionCertificador = '0601119',CodIdPrestacionHomologo = 166170,CodItemFinanciador = 0" + vtaconvenio +
+                "update trbonoprestaciones set  CodIdPrestacionCertificador = 28155" + bonoprestacion;
+             break;
+            
+            
 
         default:
             texto = "Selecciona una Prestacion";
@@ -229,8 +240,15 @@ function escribirmass() {
             case "0305095":
                 texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 27047, CodPrestacionCertificador = '0305884',CodIdPrestacionHomologo = 163721,CodItemFinanciador = 0" + vtaconvenio +
                 "update trbonoprestaciones set  CodIdPrestacionCertificador = 27047" + bonoprestacion;
+                break;
+            case "0601101":
+                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 28152, CodPrestacionCertificador = '0601118',CodIdPrestacionHomologo = 166167,CodItemFinanciador = 0" + vtaconvenio +
+                "update trbonoprestaciones set  CodIdPrestacionCertificador = 28152" + bonoprestacion;
              break;
-
+            case "0601102":
+                texto = "update trprestacionventaconvenio set  CodIdPrestacionCertificador = 28155, CodPrestacionCertificador = '0601119',CodIdPrestacionHomologo = 166170,CodItemFinanciador = 0" + vtaconvenio +
+                "update trbonoprestaciones set  CodIdPrestacionCertificador = 28155" + bonoprestacion;
+             break;
             default:
                 texto = "Prestacion no reconocida";
                 break;
