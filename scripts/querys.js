@@ -105,6 +105,14 @@ const options = [
     codIdPrestacionHomologo: 166026,
     codItemFinanciador: 0,
   },
+  {
+    value: "13",
+    label: "305104",
+    codIdPrestacionCertificador: 28062,
+    codPrestacionCertificador: "0305136",
+    codIdPrestacionHomologo: 166029,
+    codItemFinanciador: 0,
+  },
 
 ];
 
